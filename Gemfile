@@ -6,3 +6,5 @@ gem 'middleman'
 gem 'middleman-autoprefixer'
 gem 'middleman-livereload'
 gem 'middleman-deploy', '~> 0.3.0'
+
+gem 'slim'

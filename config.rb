@@ -7,6 +7,10 @@ activate :autoprefixer do |config|
   config.cascade = false
 end
 
+# Gems
+require 'slim'
+require 'slim/smart'
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
