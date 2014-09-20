@@ -25,3 +25,10 @@ configure :build do
   activate :minify_javascript
   activate :relative_assets
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # deploy.remote   = 'origin'
+  # deploy.branch   = 'gh-pages'
+  # deploy.strategy = :force_push
+end
