@@ -10,3 +10,4 @@ gem 'middleman-deploy', '~> 0.3.0'
 gem 'slim'
 
 gem 'susy'
+gem 'breakpoint'

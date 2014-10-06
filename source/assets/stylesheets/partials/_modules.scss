@@ -1,0 +1,15 @@
+header[role="banner"] {
+  h1 {
+    font-weight: 400;
+  }
+  nav {
+    li, a {
+      display: block;
+      float: left;
+      zoom: 1;
+    }
+    li {
+      margin-left: $base-line-height;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Imports
+
+@import "breakpoint";
+@import "susy";
+
+// Common standards
+
+body {
+  background-color: #fff;
+  font-family: unquote($family);
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: $regular;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}

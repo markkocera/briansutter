@@ -9,6 +9,7 @@ end
 
 # Gems
 require 'slim'
+Slim::Engine.disable_option_validator!
 # require 'slim/smart'
 
 # Methods defined in the helpers block are available in templates
