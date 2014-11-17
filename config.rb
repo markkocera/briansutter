@@ -7,6 +7,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
+set :relative_links, true
 
 # Gems
 require 'slim'
