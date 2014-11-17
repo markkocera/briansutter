@@ -1,0 +1,1 @@
+$(window).load(function(){resizePortrait()}),$(window).resize(function(){resizePortrait()});var resizePortrait=function(){$(".project-images-portrait-gallery").length&&$(".project-images-portrait-gallery").each(function(){var i=$(this),r=i.find(".landscape-first").height(),t=i.find(".landscape-second").height();$(".portrait figure").height(r+t)})};
