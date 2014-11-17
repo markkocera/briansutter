@@ -1,13 +1,18 @@
-$family:           'nudista-web', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
+$family:           ff-dagny-web-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-font-size:   20px;
 $base-line-height: 30px;
 
-$light:            300;
-$regular:          400;
-$bold:             600;
+$round-to-nearest-half-line: true;
+$rhythm-unit:                "rem";
 
-$text-color:       #3a494a;
-$border-color:     #ccc;
+$regular:              400;
+$bold:                 700;
 
-$background-color-about: #495c57;
-$background-color-works: #343436;
+$bgcolor:              white; // #a5c6bf;
+$text-color:           #111;
+$light-text-color:     #777;
+$border-color:         #bbb;
+$link-color:           #e94b4b;
+$link-hover-color:     white;
+$link-hover-bgcolor:   $link-color;
+$project-link-bgcolor: rgba(233,75,75,.9);

@@ -1,0 +1,20 @@
+nav.projects-navigation
+  .previous
+    - prev_project = project.previous_article
+    - if prev_project
+      = link_to prev_project.url, rel: 'prev' do
+        | Previous project
+        br
+        strong= prev_project.title
+    - else
+      | &nbsp;
+
+  .next
+    - next_project = project.next_article
+    - if next_project
+      = link_to next_project.url, rel: 'next' do
+        | Next project
+        br
+        strong= next_project.title
+    - else
+      | &nbsp;

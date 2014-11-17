@@ -2,17 +2,15 @@ activate :automatic_image_sizes
 activate :directory_indexes
 activate :livereload
 
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade = false
+activate :blog do |blog|
+  blog.sources = "projects/:title.html"
+  blog.permalink = "projects/:title.html"
 end
 
 # Gems
 require 'slim'
 Slim::Engine.disable_option_validator!
-# require 'slim/smart'
 
-# Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
 #     "Helping"

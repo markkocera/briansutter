@@ -1,24 +1,67 @@
+// Reset
+
+@import "compass/reset";
+
+
 // Imports
 
 @import "breakpoint";
 @import "susy";
 
+$susy: (
+  columns: 6,
+  gutters: 1/8,
+  gutter-position: inside,
+  global-box-sizing: border-box
+);
+
 // Common standards
 
+@include border-box-sizing;
+@include establish-baseline;
+
 body {
-  background-color: #fff;
+  background-color: $bgcolor;
   font-family: unquote($family);
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+  font-weight: $regular;
   color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  @include trailer;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
+  @include adjust-font-size-to(20px);
   font-weight: $regular;
+  text-rendering: optimizeLegibility;
+  @include trailer;
+}
+
+h1 {
+  @include adjust-font-size-to(32px);
 }
 
 img, video {
+  width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  // border-bottom: 1px solid $link-color;
+
+  &:hover, &:focus {
+    color: $link-hover-color;
+    background: $link-hover-bgcolor;
+  }
 }

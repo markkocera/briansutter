@@ -10,64 +10,31 @@ header[role="banner"] {
   @include clearfix;
   @include margin-trailer(2);
   @include padding-leader(1.5);
-  border-bottom: 1px solid $border-color;
-  margin-left: gutter();
-  margin-right: gutter();
+  text-align: center;
+  @include span(full);
 
   h1 {
-    font-weight: $bold;
-    @include span(3);
     padding-left: 0;
     @include adjust-font-size-to(26px);
     @include margin-trailer(0.5);
-    span {
-      font-weight: $regular;
-      @include adjust-font-size-to(19px);
-      color: $text-color;
-    }
-    a:hover {
-      span {
-        color: $link-hover-color;
-      }
-    }
-  }
-  nav {
-    @include adjust-font-size-to(19px);
     a {
-      color: $light-text-color;
+      padding: 0 10px;
+      color: $text-color;
+      border-bottom: 5px solid $link-color;
       &:hover {
         color: $link-hover-color;
       }
     }
   }
   nav.main {
-    @include span(1);
-  }
-  nav.langswitcher {
-    @include span(1);
-    @include post(1);
-  }
-  a.active {
-    border-bottom: 1px solid $border-color;
-  }
-}
-
-body.projects, body.index {
-  nav.main {
-    a:first-child {
+    a {
       color: $text-color;
+      margin: 0 rhythm(.25);
       &:hover {
         color: $link-hover-color;
       }
-    }
-  }
-}
-body.information  {
-  nav.main {
-    a:last-child {
-      color: $text-color;
-      &:hover {
-        color: $link-hover-color;
+      &.active {
+        border-bottom: 1px solid $border-color;
       }
     }
   }
@@ -159,9 +126,6 @@ a.maps {
 
 article.project {
   @include break;
-  figure {
-    line-height: 0;
-  }
 }
 
 .project-title {
@@ -174,12 +138,12 @@ article.project {
 
 .project-description {
   @include span(4);
-  @include padding-trailer;
 }
 
 .project-images-full {
   figure {
     @include span(full);
+    line-height: 0;
     padding-bottom: gutter() * 2;
   }
 }
@@ -187,22 +151,8 @@ article.project {
 .project-images-gallery {
   figure {
     @include gallery(2);
+    line-height: 0;
     padding-bottom: gutter() * 2;
-  }
-}
-
-.project-images-portrait-gallery {
-  figure {
-    padding-bottom: (gutter() * 4);
-  }
-  .portrait {
-    @include span(3);
-    figure {
-      overflow: hidden;
-    }
-  }
-  .landscape {
-    @include span(3);
   }
 }
 
@@ -258,14 +208,14 @@ footer {
   }
 
   p.copy {
-    @include span(3);
+    @include span(1);
     padding-left: 0;
   }
   p.contact {
-    @include span(1);
+    @include span(2);
   }
   p.colophon {
-    @include span(2);
+    @include span(3);
     text-align: right;
     padding-right: 0;
   }

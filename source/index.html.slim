@@ -1,0 +1,7 @@
+section#projects.project-list
+  - blog.articles.each do |article|
+    = link_to article.url, class: 'project-link' do
+      article
+        = image_tag article.data.preview_image
+        .project-image-caption
+          span= article.data.title
