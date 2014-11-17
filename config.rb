@@ -1,11 +1,12 @@
 activate :automatic_image_sizes
-activate :directory_indexes
 activate :livereload
 
 activate :blog do |blog|
   blog.sources = "projects/:title.html"
   blog.permalink = "projects/:title.html"
 end
+
+activate :directory_indexes
 
 # Gems
 require 'slim'
