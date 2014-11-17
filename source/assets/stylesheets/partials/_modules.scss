@@ -53,21 +53,25 @@ header[role="banner"] {
 }
 
 body.projects, body.index {
-  nav.main {
-    a:first-child {
-      color: $text-color;
-      &:hover {
-        color: $link-hover-color;
+  nav.main ul {
+    li:first-child {
+      a {
+        color: $text-color;
+        &:hover {
+          color: $link-hover-color;
+        }
       }
     }
   }
 }
 body.information  {
-  nav.main {
-    a:last-child {
-      color: $text-color;
-      &:hover {
-        color: $link-hover-color;
+  nav.main ul {
+    li:last-child {
+      a {
+        color: $text-color;
+        &:hover {
+          color: $link-hover-color;
+        }
       }
     }
   }
