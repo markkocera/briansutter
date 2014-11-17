@@ -7,7 +7,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-set :relative_links, true
+set :relative_links, true # remove when deploying to domain
 
 # Gems
 require 'slim'
