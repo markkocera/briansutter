@@ -1,0 +1,43 @@
+---
+title: J.C. Pompe penning
+date: 2012-07-28
+preview_image: pompe-penning/pompe-penning1.jpg
+lang: nl
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li july 2014
+        li
+          ' client:
+          = link_to 'Mirjam Mieras', 'http://www.mirjammieras.nl'
+        li wood type
+
+    .project-description
+      p
+        - 5.times do
+          == "#{lorem.sentence}. "
+      p
+        - 3.times do
+          == "#{lorem.sentence}. "
+
+  .project-images
+    .project-images-full
+      figure
+        == image_tag 'pompe-penning/pompe-penning1.jpg'
+      figure
+        == image_tag 'pompe-penning/pompe-penning3.jpg'
+
+    .project-images-gallery
+      figure
+        == image_tag 'pompe-penning/pompe-penning2.jpg'
+      figure
+        == image_tag 'pompe-penning/pompe-penning4.jpg'
+      figure
+        == image_tag 'pompe-penning/pompe-penning5.jpg'
+
+= partial 'projects_navigation', locals: {project: current_article}

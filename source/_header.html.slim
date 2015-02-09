@@ -3,12 +3,12 @@ header role="banner"
     = link_to '/index.html' do
       | Brian Sutter
       br
-      span.tagline Furniture Maker from Amsterdam
+      span.tagline= t(:tagline)
   nav.main
     ul
-      li= link_to 'Projects', '/index.html'
-      li= link_to 'Information', '/information.html'
+      li= link_to t(:projects), t(:home_url) + '.html'
+      li= link_to t(:information), t(:information_url) + '.html'
   nav.langswitcher
     ul
-      li= link_to 'Nederlands', '/index.html'
-      li= link_to 'English', '/index.html', class: 'active'
+      li= link_to 'Nederlands', '/index.html', class: "#{I18n.locale.to_sym == :nl ? 'active' : ''}"
+      li= link_to 'English', '/en/index.html', class: "#{I18n.locale.to_sym == :en ? 'active' : ''}"

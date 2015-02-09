@@ -1,0 +1,46 @@
+---
+title: Stiltecentrum
+date: 2012-05-01
+preview_image: stiltecentrum/stiltecentrum1.jpg
+lang: en
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li april 2012
+        li client: VU medisch centrum
+        li wood type
+
+    .project-description
+      p
+        - 5.times do
+          == "#{lorem.sentence}. "
+
+  .project-images
+    .project-images-full
+      figure
+        == image_tag 'stiltecentrum/stiltecentrum1.jpg'
+      figure
+        == image_tag 'stiltecentrum/stiltecentrum2.jpg'
+      figure
+        == image_tag 'stiltecentrum/stiltecentrum3.jpg'
+
+    .project-images-portrait-gallery
+      .portrait
+        figure
+          == image_tag 'stiltecentrum/stiltecentrum4.jpg'
+      .landscape
+        figure.landscape-first
+          == image_tag 'stiltecentrum/stiltecentrum5.jpg'
+        figure.landscape-second
+          == image_tag 'stiltecentrum/stiltecentrum6.jpg'
+
+    .project-images-full
+      figure
+        == image_tag 'stiltecentrum/stiltecentrum7.jpg'
+
+= partial 'projects_navigation', locals: {project: current_article}

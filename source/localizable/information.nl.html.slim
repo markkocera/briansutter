@@ -1,0 +1,24 @@
+---
+title: Informatie
+---
+
+header.information
+  h1 Informatie
+
+article
+  .information-column-1
+    p
+
+
+  .information-column-2
+    .vcard
+      p.adr
+        span.fullname> Brian Sutter<br>
+        span.street> Spaarndammerstraat 32N<br>
+        span.postal-code> 1013 SW
+        span.region> Amsterdam /
+        == link_to 'bekijk op kaart', 'https://www.google.com/maps/place/Spaarndammerstraat+32N,+1013+SW+Amsterdam', class: 'maps'
+      p.tel 06 – 15 13 54 52
+      p.email == link_to 'brian@briansutter.nl', 'mailto:brian@briansutter.nl'
+
+    p= image_tag('http://placekitten.com/600/510')

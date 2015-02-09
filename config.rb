@@ -1,22 +1,23 @@
 activate :automatic_image_sizes
 activate :livereload
 
+activate :i18n, :mount_at_root => :nl
+
 activate :blog do |blog|
+  blog.prefix = "{lang}"
   blog.sources = "projects/:title.html"
-  blog.permalink = "projects/:title.html"
+  blog.permalink = ":title.html"
 end
 
 activate :directory_indexes
-set :relative_links, true # remove when deploying to domain
+# set :relative_links, true # remove when deploying to domain
 
-# Gems
 require 'slim'
 Slim::Engine.disable_option_validator!
 
+activate :protect_emails
+
 # helpers do
-#   def some_helper
-#     "Helping"
-#   end
 # end
 
 set :css_dir, 'assets/stylesheets'
@@ -24,7 +25,6 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 
-# Build-specific configuration
 configure :build do
   activate :minify_css
   activate :minify_javascript
@@ -34,7 +34,4 @@ end
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.build_before = true
-  # deploy.remote   = 'origin'
-  # deploy.branch   = 'gh-pages'
-  # deploy.strategy = :force_push
 end
