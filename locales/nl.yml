@@ -3,7 +3,9 @@ nl:
   tagline: Meubelmaker uit Amsterdam
   projects: Projecten
   information: Informatie
-  information_url: "/information"
+  information_url: "/informatie"
   home_url: "/index"
   previous: Vorig
   next: Volgend
+  paths:
+    information: "informatie"
