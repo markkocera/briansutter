@@ -52,7 +52,7 @@ header[role="banner"] {
   }
 }
 
-body.projects, body.index {
+body.index, body.en_index {
   nav.main ul {
     li:first-child {
       a {
@@ -64,7 +64,7 @@ body.projects, body.index {
     }
   }
 }
-body.information  {
+body.information, body.en_information  {
   nav.main ul {
     li:last-child {
       a {

@@ -1,16 +1,16 @@
 activate :automatic_image_sizes
 activate :livereload
 
-activate :i18n, :mount_at_root => :nl
+activate :i18n, mount_at_root: :nl
 
 activate :blog do |blog|
-  blog.prefix = "{lang}"
+  blog.prefix = ":lang"
   blog.sources = "projects/:title.html"
   blog.permalink = ":title.html"
 end
 
 activate :directory_indexes
-# set :relative_links, true # remove when deploying to domain
+set :relative_links, false
 
 require 'slim'
 Slim::Engine.disable_option_validator!
