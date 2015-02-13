@@ -1,7 +1,7 @@
 ---
 title: Branchbox
 date: 2014-10-7
-preview_image: branchbox/branchbox1.jpg
+preview_image: branchbox/branchbox-p.jpg
 lang: nl
 ---
 
@@ -11,33 +11,25 @@ article.project
   .project-info
     .project-meta
       ul
-        li september 2014
-        li wood type
-        li found twig
+        li Juli 2014
+        li
+          strong> Material
+          | Amazakoue, iepentakken
+        li
+          strong> Afwerking
+          | India inkt, olie en was, tak met 2 componenten lak
 
     .project-description
       p
-        - 5.times do
-          == "#{lorem.sentence}. "
-      p
-        == link_to 'Contact me to order your own box', '/'
-        | .
+        |
+          Inspiratie voor de Branchbox is ontstaan tijdens het hardlopen door
+          het park en de gemoedsrust die ik krijg van de combinatie van jong en
+          donker hout. De rijke kleuren van het mos op de takken is door de lak
+          perfekt bewaard gebleven. Stalen pinnen in de twijgen die de tak met
+          de doos verbinden maken wat delicaat lijkt verrassend stevig. Ik maak
+          diverse bekledingen, bijvoorbeeld voor sieraden, en ik maak ook een
+          versie om aan de muur te bevestigen met haken voor sleutels.
 
-  .project-images
-    .project-images-full
-      figure
-        == image_tag 'branchbox/branchbox1.jpg'
-      figure
-        == image_tag 'branchbox/branchbox2.jpg'
-      figure
-        == image_tag 'branchbox/branchbox3.jpg'
-
-    .project-images-gallery
-      figure
-        == image_tag 'branchbox/branchbox4.jpg'
-      figure
-        == image_tag 'branchbox/branchbox5.jpg'
-      figure
-        == image_tag 'branchbox/branchbox6.jpg'
+  = partial 'shared/branchbox'
 
 = partial 'projects_navigation', locals: {project: current_article}

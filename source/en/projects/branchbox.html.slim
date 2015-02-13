@@ -1,7 +1,7 @@
 ---
 title: Branchbox
 date: 2014-10-7
-preview_image: branchbox/branchbox1.jpg
+preview_image: branchbox/branchbox-p.jpg
 lang: en
 ---
 
@@ -11,33 +11,25 @@ article.project
   .project-info
     .project-meta
       ul
-        li september 2014
-        li wood type
-        li found twig
+        li July 2014
+        li
+          strong> Material
+          | Amazakoue, elm branches
+        li
+          strong> Finish
+          | India ink, oil and wax, branch with 2 component flat lacquer
 
     .project-description
       p
-        - 5.times do
-          == "#{lorem.sentence}. "
-      p
-        == link_to 'Contact me to order your own box', '/'
-        | .
+        |
+          The Branchbox is inspired by running through parks in Amsterdam and
+          the peace of mind I seem to get from the combination of green and dark
+          wood. The rich colors of the moss that grew on the branches is
+          perfectly preserved by lacquer. Steel pins run through the twigs
+          connecting the branch to the box to make what appears to be delicate
+          surprisingly sturdy. I make various interiors, for example for
+          jewelry, and I also make a wall mounted version with hooks for keys.
 
-  .project-images
-    .project-images-full
-      figure
-        == image_tag 'branchbox/branchbox1.jpg'
-      figure
-        == image_tag 'branchbox/branchbox2.jpg'
-      figure
-        == image_tag 'branchbox/branchbox3.jpg'
-
-    .project-images-gallery
-      figure
-        == image_tag 'branchbox/branchbox4.jpg'
-      figure
-        == image_tag 'branchbox/branchbox5.jpg'
-      figure
-        == image_tag 'branchbox/branchbox6.jpg'
+  = partial 'shared/branchbox'
 
 = partial 'projects_navigation', locals: {project: current_article}

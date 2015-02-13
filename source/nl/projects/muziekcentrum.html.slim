@@ -1,0 +1,28 @@
+---
+title: Muziekcentrum Nederland
+date: 2008-01-01
+preview_image: muziekcentrum/muziekcentrum-p.jpg
+lang: nl
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li 2008-2012, Amsterdam
+        li Verschillende projecten
+
+    .project-description
+      p
+        |
+          Geweldige mensen om mee te werken. Doordat ik zelf lang muzikant
+          ben geweest voelde ik me thuis bij de mensen van het muziekcentrum.
+          Voor het centrum bouwde ik twee geluidsstudio's en ontwierp en bouwde
+          een printkamer en verschillende meubelstukken voor de lobby en de
+          kantine.
+
+  = partial 'shared/muziekcentrum'
+
+= partial 'projects_navigation', locals: {project: current_article}

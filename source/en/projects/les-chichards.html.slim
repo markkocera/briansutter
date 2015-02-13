@@ -1,7 +1,7 @@
 ---
 title: Les Chichards
-date: 2012-09-01
-preview_image: les-chichards/les-chichards1.jpg
+date: 2013-03-01
+preview_image: les-chichards/les-chichards-p.jpg
 lang: en
 ---
 
@@ -11,20 +11,24 @@ article.project
   .project-info
     .project-meta
       ul
-        li september 2012 en
-        li client: Dan Seelig
-        li wood type
+        li March 2013
+        li
+          strong> Design
+          | Client and myself
+        li
+          strong> Material
+          | Locally grown oak
+        li
+          strong> Hardware
+          | Push to open drawer slides
 
     .project-description
       p
-        - 3.times do
-          == "#{lorem.sentence}. "
+        |
+          A dream project, building a kitchen and large scale doors and windows
+          from local material on-site in a brilliantly renovated farmhouse in
+          the Sancerre region in France.
 
-  .project-images
-    .project-images-full
-      figure
-        == image_tag 'les-chichards/les-chichards1.jpg'
-
-    .project-images-gallery
+  = partial 'shared/les_chichards'
 
 = partial 'projects_navigation', locals: {project: current_article}

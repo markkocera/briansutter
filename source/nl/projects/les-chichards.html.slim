@@ -1,7 +1,7 @@
 ---
 title: Les Chichards
-date: 2012-09-01
-preview_image: les-chichards/les-chichards1.jpg
+date: 2013-03-01
+preview_image: les-chichards/les-chichards-p.jpg
 lang: nl
 ---
 
@@ -11,20 +11,24 @@ article.project
   .project-info
     .project-meta
       ul
-        li september 2012
-        li client: Dan Seelig
-        li wood type
+        li Maart 2013
+        li
+          strong> Ontwerp
+          | Opdrachtgever en ikzelf
+        li
+          strong> Materiaal
+          | Lokaal eiken
+        li
+          strong> IJzerwaren
+          | ‘Push to open’ ladegeleiders
 
     .project-description
       p
-        - 3.times do
-          == "#{lorem.sentence}. "
+        |
+          Een droomproject: het bouwen van een keuken, grootschalige deuren en
+          ramen van lokaal materiaal in een schitterend gerenoveerde boerderij
+          in de Sancerre regio in Frankrijk.
 
-  .project-images
-    .project-images-full
-      figure
-        == image_tag 'les-chichards/les-chichards1.jpg'
-
-    .project-images-gallery
+  = partial 'shared/les_chichards'
 
 = partial 'projects_navigation', locals: {project: current_article}

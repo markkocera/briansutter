@@ -1,0 +1,34 @@
+---
+title: Bureau
+date: 2008-02-01
+preview_image: desk/desk-p.jpg
+lang: nl
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li Februari 2008, Amsterdam
+        li
+          strong> Ontwerp
+          | Ikzelf
+        li
+          strong> Materiaal
+          | Amerikaans walnoot, Belgisch hardsteen
+        li
+          strong> Afwerking
+          | Olie en was
+
+    .project-description
+      p
+        |
+          Een minimalistisch en functioneel meubelstuk, speciaal gemaakt
+          om in een lange, smalle kamer te passen. Met handige steunen voor een
+          computer en een printer.
+
+  = partial 'shared/desk'
+
+= partial 'projects_navigation', locals: {project: current_article}

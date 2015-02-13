@@ -1,0 +1,33 @@
+---
+title: Kast onder de trap
+date: 2013-02-01
+preview_image: under-stair-cabinet/cabinet-p.jpg
+lang: nl
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li Februari 2013, Amsterdam
+        li
+          strong> Ontwerp
+          | Ikzelf
+        li
+          strong> Material
+          | Gefineerd eiken multiplex
+        li
+          strong> Finish
+          | Olie en was
+
+    .project-description
+      p
+        |
+          Een mooie manier om de sierlijke boog onder de trap te benadrukken en
+          de beschikbare ruimte te benutten.
+
+  = partial 'shared/under_stair_cabinet'
+
+= partial 'projects_navigation', locals: {project: current_article}

@@ -1,0 +1,33 @@
+---
+title: Desk
+date: 2008-02-01
+preview_image: desk/desk-p.jpg
+lang: en
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li February 2008, Amsterdam
+        li
+          strong> Design
+          | Myself
+        li
+          strong> Material
+          | American walnut, Belgian bluestone
+        li
+          strong> Finish
+          | Oil and wax
+
+    .project-description
+      p
+        |
+          A minimalist but very useful piece I made for a client to fit in a
+          long narrow room and accommodate a computer and printer.
+
+  = partial 'shared/desk'
+
+= partial 'projects_navigation', locals: {project: current_article}

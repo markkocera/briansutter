@@ -1,7 +1,7 @@
 ---
 title: J.C. Pompe penning
-date: 2012-07-28
-preview_image: pompe-penning/pompe-penning1.jpg
+date: 2012-09-14
+preview_image: pompe-penning/pompe-penning-p.jpg
 lang: nl
 ---
 
@@ -11,33 +11,22 @@ article.project
   .project-info
     .project-meta
       ul
-        li july 2014
+        li September 2012
         li
-          ' client:
+          strong> Design
           = link_to 'Mirjam Mieras', 'http://www.mirjammieras.nl'
-        li wood type
+        li
+          strong> Materiaal
+          | Ebben
 
     .project-description
       p
-        - 5.times do
-          == "#{lorem.sentence}. "
-      p
-        - 3.times do
-          == "#{lorem.sentence}. "
+        |
+          Een mooi ontwerp door Mirjam Mieras. Ik adviseerde ebbenhout voor dit
+          project: ebben is stabiel, zwaar, hard als steen maar tegelijkertijd
+          zacht en soepel, het ligt prettig in de hand en heeft geen vernis
+          nodig. Het metaal van de penning schuift perfect in het ebben blokje.
 
-  .project-images
-    .project-images-full
-      figure
-        == image_tag 'pompe-penning/pompe-penning1.jpg'
-      figure
-        == image_tag 'pompe-penning/pompe-penning3.jpg'
-
-    .project-images-gallery
-      figure
-        == image_tag 'pompe-penning/pompe-penning2.jpg'
-      figure
-        == image_tag 'pompe-penning/pompe-penning4.jpg'
-      figure
-        == image_tag 'pompe-penning/pompe-penning5.jpg'
+  = partial 'shared/pompe_penning'
 
 = partial 'projects_navigation', locals: {project: current_article}

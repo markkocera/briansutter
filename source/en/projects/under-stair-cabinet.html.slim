@@ -1,0 +1,33 @@
+---
+title: Under Stair cabinet
+date: 2013-02-01
+preview_image: under-stair-cabinet/cabinet-p.jpg
+lang: en
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li February 2013, Amsterdam
+        li
+          strong> Design
+          | Myself
+        li
+          strong> Material
+          | Oak veneered multiplex
+        li
+          strong> Finish
+          | Oil and wax
+
+    .project-description
+      p
+        |
+          A nice way to frame the graceful curve under a staircase and make use
+          of the space.
+
+  = partial 'shared/under_stair_cabinet'
+
+= partial 'projects_navigation', locals: {project: current_article}

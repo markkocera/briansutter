@@ -1,0 +1,35 @@
+---
+title: Kaidan dansu
+date: 2007-04-01
+preview_image: kaidan-dansu/kaidan-dansu-p.jpg
+lang: en
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li April 2007
+        li
+          strong> Design
+          | Myself
+        li
+          strong> Material
+          | American walnut, oiled bronze
+        li
+          strong> Finish
+          | Oil and wax
+
+    .project-description
+      p
+        |
+          A client commissioned me to make this piece based on an old Japanese
+          step-chest she admired. It was fun to make and design. It had to fit
+          an audio video system and comes apart so it can be stacked in many
+          ways to adapt to different environments.
+
+  = partial 'shared/kaidan_dansu'
+
+= partial 'projects_navigation', locals: {project: current_article}

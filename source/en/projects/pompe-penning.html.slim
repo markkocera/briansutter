@@ -1,7 +1,7 @@
 ---
-title: J.C. Pompe penning
-date: 2012-07-28
-preview_image: pompe-penning/pompe-penning1.jpg
+title: J.C. Pompe medal
+date: 2012-09-14
+preview_image: pompe-penning/pompe-penning-p.jpg
 lang: en
 ---
 
@@ -11,33 +11,22 @@ article.project
   .project-info
     .project-meta
       ul
-        li july 2014
+        li September 2012
         li
-          ' client:
+          strong> Design
           = link_to 'Mirjam Mieras', 'http://www.mirjammieras.nl'
-        li wood type
+        li
+          strong> Material
+          | Ebony
 
     .project-description
       p
-        - 5.times do
-          == "#{lorem.sentence}. "
-      p
-        - 3.times do
-          == "#{lorem.sentence}. "
+        |
+          A great design by Mirjam Mieras. I recommended ebony for this project:
+          it is stable, heavy and hard as rock yet creamy as butter, it feels
+          very nice in your hands and needs no finish. The medal slides
+          perfectly into the ebony.
 
-  .project-images
-    .project-images-full
-      figure
-        == image_tag 'pompe-penning/pompe-penning1.jpg'
-      figure
-        == image_tag 'pompe-penning/pompe-penning3.jpg'
-
-    .project-images-gallery
-      figure
-        == image_tag 'pompe-penning/pompe-penning2.jpg'
-      figure
-        == image_tag 'pompe-penning/pompe-penning4.jpg'
-      figure
-        == image_tag 'pompe-penning/pompe-penning5.jpg'
+  = partial 'shared/pompe_penning'
 
 = partial 'projects_navigation', locals: {project: current_article}
