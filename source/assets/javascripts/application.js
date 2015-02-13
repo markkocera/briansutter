@@ -16,3 +16,13 @@ var resizePortrait = function() {
     });
   }
 };
+
+$('p.brian img').on('mouseover', function() {
+  $this = $(this);
+  $this.prop('src', $this.data('mouseover'));
+});
+
+$('p.brian img').on('mouseout', function() {
+  $this = $(this);
+  $this.prop('src', $this.data('mouseout'));
+});
