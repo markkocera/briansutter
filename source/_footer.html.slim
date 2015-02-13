@@ -1,12 +1,8 @@
 footer
-  div
-    p.copy &copy; 2014
-    p.contact
-      = link_to 'Brian Sutter', '/'
-      br
-      = mail_to 'brian@briansutter.nl', 'brian@briansutter.nl'
-      br
-      | 06 - 15 13 54 52
-    p.colophon
-      ' website:
-      = link_to 'Mark Kocera', 'http://www.markkocera.nl/'
+  ul
+    li © 2014
+    li=  mail_to 'brian@briansutter.nl', 'brian@briansutter.nl'
+    li 06 - 15 13 54 52
+  p.colophon
+    ' website:
+    = link_to 'Mark Kocera', 'http://www.markkocera.nl/'
