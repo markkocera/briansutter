@@ -4,22 +4,32 @@
   @include container(1200px);
 }
 
+
 // Header
 
 header[role="banner"] {
   @include clearfix;
-  @include margin-trailer(2);
-  @include padding-leader(1.5);
+  @include padding-leader(1);
+  margin: 0 $mobile-gutter;
+  @include margin-trailer(0.5);
   border-bottom: 1px solid $border-color;
-  margin-left: gutter();
-  margin-right: gutter();
+
+  @include susy-breakpoint($bp-small) {
+    @include full;
+    @include margin-trailer(1);
+  }
+  @include susy-breakpoint($bp-medium) {
+    @include margin-trailer(2);
+    @include padding-leader(1.5);
+  }
 
   h1 {
     font-weight: $bold;
-    @include span(3);
-    padding-left: 0;
     @include adjust-font-size-to(26px);
     @include margin-trailer(0.5);
+    @include susy-breakpoint($bp-medium) {
+      @include span(3 nest);
+    }
     span {
       font-weight: $regular;
       @include adjust-font-size-to(19px);
@@ -31,6 +41,7 @@ header[role="banner"] {
       }
     }
   }
+
   nav {
     @include adjust-font-size-to(19px);
     a {
@@ -40,20 +51,42 @@ header[role="banner"] {
       }
     }
   }
+
   nav.main {
-    @include span(1);
+    float: left;
+    @include susy-breakpoint($bp-medium) {
+      @include span(1);
+    }
   }
+
   nav.langswitcher {
-    @include span(1);
-    @include post(1);
+    float: left;
+    @include susy-breakpoint($bp-medium) {
+      @include span(1);
+      @include post(1);
+    }
   }
+
+  li {
+    display: inline-block;
+    margin-right: 1em;
+    @include margin-trailer(0.5);
+    @include susy-breakpoint(50em) {
+      display: block;
+      margin: 0;
+    }
+  }
+  nav.langswitcher li:last-child {
+    margin-right: 0;
+  }
+
   a.active {
     border-bottom: 1px solid $border-color;
   }
 }
 
 body.index, body.en_index {
-  nav.main ul {
+  nav.main {
     li:first-child {
       a {
         color: $text-color;
@@ -65,7 +98,7 @@ body.index, body.en_index {
   }
 }
 body.information, body.en_information  {
-  nav.main ul {
+  nav.main {
     li:last-child {
       a {
         color: $text-color;
@@ -85,10 +118,13 @@ body.information, body.en_information  {
 }
 
 a.project-link {
-  @include gallery(3);
-  margin-bottom: gutter(6) * 2;
   background: none;
   line-height: 0;
+
+  @include susy-breakpoint($bp-small) {
+    @include gallery(3);
+    margin-bottom: gutter(6) * 2;
+  }
 
   article {
     position: relative;
@@ -119,7 +155,6 @@ a.project-link {
   }
 
   &:hover {
-
     img {
       opacity: 0.9;
     }
@@ -133,24 +168,33 @@ a.project-link {
 // About
 
 header.information {
-  @include span(full);
+  margin: 0 $mobile-gutter;
+  @include susy-breakpoint(53em) {
+    @include full;
+  }
 }
 
 .information-column-1 {
-  @include span(4);
+  margin: 0 $mobile-gutter;
+  @include susy-breakpoint(53em) {
+    @include span(4);
+  }
   p:first-child {
     @include adjust-font-size-to(21px);
   }
 }
 
 .information-column-2 {
-  @include span(2);
+  margin: 0 $mobile-gutter;
+  @include susy-breakpoint(53em) {
+    @include span(2);
+  }
 }
 
 .vcard {
-  margin-bottom: rhythm(2);
-  p.tel {
-    margin: rhythm(2) 0 0;
+  margin-bottom: rhythm(1);
+  p {
+    margin: 0;
   }
 }
 
@@ -162,18 +206,30 @@ a.maps {
 // Project
 
 article.project {
-  @include break;
   figure {
     line-height: 0;
   }
 }
 
 .project-title {
-  @include span(full);
+  margin: 0 $mobile-gutter;
+  @include susy-breakpoint($bp-small) {
+    @include full;
+  }
+
 }
 
 .project-meta {
-  @include span(2);
+  @include adjust-font-size-to(18px);
+  margin: 0 $mobile-gutter rhythm(1) $mobile-gutter;
+
+  @include susy-breakpoint($bp-small $bp-medium) {
+    @include full;
+  }
+  @include susy-breakpoint($bp-medium) {
+    @include span(2);
+  }
+
   a {
     color: $text-color;
     border-bottom: 1px solid $border-color;
@@ -182,45 +238,70 @@ article.project {
       border: 0;
     }
   }
+  strong {
+    color: $light-text-color;
+  }
 }
 
 .project-description {
-  @include span(4);
-  @include padding-trailer;
+  margin: 0 $mobile-gutter;
+  @include susy-breakpoint($bp-small $bp-medium) {
+    @include full;
+  }
+  @include susy-breakpoint($bp-medium) {
+    @include span(4);
+    @include padding-trailer;
+  }
 }
 
 .project-images-full {
+  @include break;
   figure {
-    @include span(full);
-    padding-bottom: gutter() * 2;
+    @include susy-breakpoint($bp-small) {
+      @include full;
+      padding-bottom: gutter() * 2;
+    }
   }
 }
 
 .project-images-gallery {
+  @include break;
   figure {
-    @include gallery(2);
-    padding-bottom: gutter() * 2;
+    @include susy-breakpoint($bp-small) {
+      @include gallery(2);
+      padding-bottom: gutter() * 2;
+    }
   }
 }
 
 .project-images-portrait-gallery {
-  figure {
-    padding-bottom: (gutter() * 4);
-  }
-  .portrait {
-    @include span(3);
+  @include break;
+  @include susy-breakpoint($bp-small) {
     figure {
-      overflow: hidden;
+      padding-bottom: (gutter() * 4);
     }
-  }
-  .landscape {
-    @include span(3);
+    .portrait {
+      @include span(3);
+      figure {
+        overflow: hidden;
+      }
+    }
+    .landscape {
+      @include span(3);
+    }
   }
 }
 
 .projects-navigation {
   @include break;
+  @include clearfix;
   @include padding-leader(0.5);
+  margin: 0 $mobile-gutter rhythm(1) $mobile-gutter;
+
+  @include susy-breakpoint($bp-small) {
+    @include full;
+    margin-bottom: 0;
+  }
   a {
     color: $light-text-color;
     @include adjust-font-size-to(19px);
@@ -237,26 +318,30 @@ article.project {
   }
 
   .previous {
-    @include span(3);
+    @include span(3 nest);
   }
+
   .next {
-    @include span(3);
+    @include span(3 nest);
     text-align: right;
   }
 }
 
+
 // Footer
 
 footer {
-  @include span(full);
   @include break;
-  @include margin-leader;
-  @include padding-trailer(2);
-  div {
-    @include clearfix;
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  border-top: 1px solid $border-color;
+
+  @include susy-breakpoint($bp-small) {
+    @include full;
+    @include margin-leader;
     @include padding-leader(0.5);
-    border-top: 2px solid $border-color;
   }
+
   a {
     color: $light-text-color;
     &:hover {
@@ -264,21 +349,21 @@ footer {
     }
   }
 
-  p {
+  ul, p {
+    margin: 0 $mobile-gutter;
     color: $light-text-color;
     @include adjust-font-size-to(18px, .9);
+    @include margin-trailer(0.5);
+
+    @include susy-breakpoint($bp-small) {
+      @include span(3 nest);
+      margin: 0;
+    }
   }
 
-  p.copy {
-    @include span(3);
-    padding-left: 0;
-  }
-  p.contact {
-    @include span(1);
-  }
-  p.colophon {
-    @include span(2);
-    text-align: right;
-    padding-right: 0;
+  @include susy-breakpoint($bp-small) {
+    p {
+      text-align: right;
+    }
   }
 }

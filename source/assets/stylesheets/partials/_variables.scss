@@ -2,13 +2,26 @@ $family:           ff-dagny-web-pro, Helvetica Neue, Helvetica, Arial, sans-seri
 $base-font-size:   20px;
 $base-line-height: 30px;
 
+@import "susy";
+
+$susy: (
+  columns: 6,
+  gutters: 1/6,
+  gutter-position: split,
+  global-box-sizing: (border-box, true)
+);
+
 $round-to-nearest-half-line: true;
 $rhythm-unit:                "rem";
+
+$bp-small:      37.5em;
+$bp-medium:     50em;
+$mobile-gutter: (gutter() * 3);
 
 $regular:              400;
 $bold:                 700;
 
-$bgcolor:              white; // #a5c6bf;
+$bgcolor:              white;
 $text-color:           #111;
 $light-text-color:     #777;
 $border-color:         #bbb;
