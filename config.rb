@@ -10,7 +10,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-set :relative_links, false
+set :relative_links, true
 
 require 'slim'
 Slim::Engine.disable_option_validator!
