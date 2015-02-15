@@ -86,6 +86,12 @@ header[role="banner"] {
 }
 
 body.index, body.en_index {
+  header[role="banner"] {
+    border-bottom: 0;
+    @include susy-breakpoint($bp-small) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
   nav.main {
     li:first-child {
       a {
