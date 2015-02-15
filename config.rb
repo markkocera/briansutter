@@ -10,7 +10,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-set :relative_links, true
+set :relative_links, false
 
 require 'slim'
 Slim::Engine.disable_option_validator!
@@ -30,5 +30,5 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.build_before = true
+  deploy.build_before = false
 end
