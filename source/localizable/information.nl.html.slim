@@ -46,6 +46,6 @@ article
         span.region> Amsterdam /
         == link_to 'zoek het op', 'https://www.google.com/maps/place/Spaarndammerstraat+32N,+1013+SW+Amsterdam', class: 'maps'
       p.tel 06 – 15 13 54 52
-      p.email == link_to 'brian@briansutter.nl', 'mailto:brian@briansutter.nl'
+      p.email=  mail_to 'brian.sutter@gmail.com', 'brian.sutter@gmail.com'
 
     p.brian= image_tag('brian1.jpg', data: {mouseover: image_path('brian2.jpg'), mouseout: image_path('brian1.jpg')})
