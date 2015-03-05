@@ -1,0 +1,34 @@
+---
+title: Wall cabinet with drawers
+date: 2014-01-01
+preview_image: wall-cabinet/cabinet-p.jpg
+lang: en
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li January 2014, Amsterdam
+        li
+          strong> Design
+          | Client and myself
+        li
+          strong> Material
+          | Birch multiplex
+        li
+          strong> Finish
+          | 2 component flat lacquer
+
+    .project-description
+      p
+        |
+          A simple design with 45 degree cuts for the corners so that
+          the individual layers of multiplex align with each other.
+          With adjustable shelves.
+
+  = partial 'shared/wall_cabinet'
+
+= partial 'projects_navigation', locals: {project: current_article}

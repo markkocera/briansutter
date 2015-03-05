@@ -298,6 +298,19 @@ article.project {
   }
 }
 
+.project-images-gallery-four {
+  @include break;
+  figure {
+    @include susy-breakpoint($bp-small) {
+      @include gallery(4 of 8 1/4);
+      padding-bottom: gutter() * 2;
+    }
+    @include susy-breakpoint($bp-medium) {
+      @include gallery(2 of 8 1/4);
+    }
+  }
+}
+
 .projects-navigation {
   @include break;
   @include clearfix;

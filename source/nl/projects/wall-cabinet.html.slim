@@ -1,0 +1,34 @@
+---
+title: Muurkast met lades
+date: 2014-01-01
+preview_image: wall-cabinet/cabinet-p.jpg
+lang: nl
+---
+
+article.project
+  header.project-title
+    h1= current_page.data.title
+  .project-info
+    .project-meta
+      ul
+        li Januari 2014, Amsterdam
+        li
+          strong> Ontwerp
+          | Opdrachtgever en ikzelf
+        li
+          strong> Material
+          | Berken multiplex
+        li
+          strong> Afwerking
+          | 2 componenten lak
+
+    .project-description
+      p
+        |
+          Een eenvoudig ontwerp met hoeken van 45 graden zodat de
+          individuele lagen multiplex op elkaar aansluiten. Met
+          verstelbare planken.
+
+  = partial 'shared/wall_cabinet'
+
+= partial 'projects_navigation', locals: {project: current_article}
